@@ -1,0 +1,35 @@
+# Transcript (YouTube auto-generated English captions, track en-orig)
+# Source: video.en-orig.vtt. Rolling duplicate caption lines removed; [music] tags dropped.
+
+[00:03]
+This V8 is not a video. It's a webpage and it is taking itself apart. Drag the throttle and eight pistons chase it. Every gauge on the edge is reading the same math that moves the metal. The builder says one of these pulled 3.8 million views.
+I didn't count his views. Everything else in this video, I measured. It's called teardown, a free Cloud Code skill. I installed it, timed every step, and then made it build me a jet engine. One command installs it, 9.7 seconds.
+The installer even runs three security scans on the skill before it lands. One more command pulls its tools, a bundler, and its own browser for self-checks. 93 seconds and about 570 megabytes once.
+
+[00:50]
+And a skill is just a folder you can read. A 12 kilobyte rulebook, a rendering kit, and three finished machines to steal from. The rules read like a cranky film teacher. Start from a reference, never from imagination. Real numbers, one source.
+The part doing the work opens up. The shipped V8 bundles to one file in a tenth of a second, 806 kilobytes, and it works with the Wi-Fi off. Inside that file, a crossplane crank, the real firing order, and a chamber pressure model drawing its loop as the crank turns.
+Press a cylinder and the page isolates it. Glass liner, the charge burning inside, valves lifting on their own cams.
+
+[01:36]
+And when nobody touches it, it tours itself. A cursor walks the page and one click hands you the wheel. 25 quiet seconds hands it back. Now the real test. The three examples are polished. I wanted something it has no example for, so I asked for a jet engine.
+The whole brief, a high bypass turbofan I can take apart. Real dimensions, live gauges, a thrust lever, a button for every stage. Check your own frames before you call it done. What's a turbo fan? One shaft spins a fan the size of a room.
+Another spins the core. Compressor, combustor, turbine. Two spools, one job. Throw air backwards. For the first 8 minutes, it
+
+[02:21]
+wrote no code at all. It read the V8's math, its stage, its film script, and the capture tool. Rule one in action. Start from a reference. Then it wrote the physics before any geometry and tested it like code.
+Mid-run, its own log. The working line goes NaN past lambda one. It found the hole in its own math and closed it. It rendered contact sheets of its own frames and read them. That's how it caught the spinner's spiral marking not showing and a laptop trap.
+Headless chromium faking the GP GPU in software. It hunted flags until the real one answered. 31 minutes after the prompt, this. A GE90 class turbo fan. 22 real fan
+
+[03:08]
+blades, five live dials, a FADEC chasing the lever, and the same spool math driving all of it. Every stage is a button. Press one, the rest turns to glass and the camera flies in. Nine compressor stages, 24 fuel nozzles, two shafts spinning inside each other.
+The receipts. 31 minutes of agent time, $7.29 in model usage, and the finished page is 785 kilobytes. It's not flawless. In the exploded view, the nacelle lip goes white on a white background, breaking the skill's own rule number five.
+The machine missed it. I didn't. Second catch. This is real-time 3D. Their own rulebook warns a desktop page
+
+[03:55]
+at 60 frames can drop to 15 on a laptop's built-in GPU. They ship quality tiers for exactly that. And the setup is honest, but heavy. Half a gigabyte of browser, just so the skill can look at its own frames.
+Your Mac needs Node, FFmpeg, and Python for the full kit. The repo is 2 days old, 343 stars, 64 forks. Young, moving fast, and built on an older open kit with its own momentum. Verdict. The skill keeps its promise.
+One sentence in, a machine you can hand to anyone. No server, no account. If you build anything, an app, an API, a robot, this is what a demo looks like now. Not slides with arrows, the thing
+
+[04:41]
+itself, running with your real numbers live on screen. Install it, point it at the thing you build, and let the page do the explaining. Subscribe for the next hands-on test.

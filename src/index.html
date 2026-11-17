@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reactor Teardown</title>
+<meta name="description" content="Four nuclear reactors you can run and take apart in 3D: PWR, sodium fast breeder, molten-salt breeder and tokamak. Simplified teaching models, offline.">
+<style>/*__STYLE__*/</style>
+</head>
+<body>
+<a class="skip" href="#pane-controls" data-t="Skip to controls">Skip to controls</a>
+<header id="top">
+  <a class="brand" href="#uranium" aria-label="Reactor Teardown"><span class="mono-mark" aria-hidden="true">RT</span><span class="word">Reactor Teardown</span></a>
+  <nav id="tabs" role="tablist" aria-label="Reactors" data-t-aria="Reactors"></nav>
+  <div class="top-actions">
+    <button id="btn-tour" type="button" aria-pressed="false" data-t="Tour" data-t-title="Play the guided tour">Tour</button>
+    <button id="btn-compare" type="button" aria-haspopup="dialog" data-t="Compare" data-t-title="Compare the four machines (C)">Compare</button>
+    <button id="btn-about" type="button" aria-haspopup="dialog" data-t="About" data-t-title="About and sources (?)">About</button>
+    <div class="langseg" role="group" aria-label="Language"><button type="button" data-lang="vi" aria-pressed="true">VI</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+  </div>
+</header>
+
+<main id="main">
+  <div id="stage">
+    <canvas id="gl" tabindex="0" aria-label="3D view. Drag to orbit, scroll to zoom, right-drag or shift-drag to pan." data-t-aria="3D view. Drag to orbit, scroll to zoom, right-drag or shift-drag to pan."></canvas>
+    <div id="loading" hidden></div>
+    <div id="caption" class="caption" aria-live="polite"></div>
+    <div id="hint" class="hint" data-t="Drag to orbit, scroll to zoom, click a part to isolate it">Drag to orbit, scroll to zoom, click a part to isolate it</div>
+  </div>
+
+  <div id="sheet">
+    <nav id="sheet-tabs" role="tablist" aria-label="Panels">
+      <button role="tab" data-pane="parts" aria-selected="true" data-t="Parts">Parts</button>
+      <button role="tab" data-pane="controls" aria-selected="false" data-t="Controls">Controls</button>
+      <button role="tab" data-pane="gauges" aria-selected="false" data-t="Gauges">Gauges</button>
+      <button role="tab" data-pane="atoms" aria-selected="false" data-t="Atoms">Atoms</button>
+    </nav>
+
+    <section id="left-rail" class="rail">
+      <div id="card-slot"></div>
+      <div id="pane-parts" class="pane" data-pane="parts">
+        <h2 data-t="View">View</h2>
+        <div class="seg" id="modes" role="radiogroup" aria-label="View mode">
+          <button type="button" role="radio" data-mode="solid" data-tour="mode:solid" data-t="Solid">Solid</button>
+          <button type="button" role="radio" data-mode="cutaway" data-tour="mode:cutaway" data-t="Cutaway">Cutaway</button>
+          <button type="button" role="radio" data-mode="xray" data-tour="mode:xray" data-t="X-ray">X-ray</button>
+        </div>
+        <label class="ctl slider" id="cut-ctl" data-tour="cut"><span class="top"><span class="lbl" data-t="Cut angle">Cut angle</span><span class="v"><output id="cut-out">35</output><em>&deg;</em></span></span><input id="cut" type="range" min="0" max="359" step="1" value="35" aria-label="Cutaway angle" data-t-aria="Cutaway angle"></label>
+        <label class="ctl slider" id="explode-ctl" data-tour="explode"><span class="top"><span class="lbl" data-t="Explode">Explode</span><span class="v"><output id="explode-out">0</output><em>%</em></span></span><input id="explode" type="range" min="0" max="100" step="1" value="0" aria-label="Explode" data-t-aria="Explode"></label>
+        <div class="presets" id="presets" aria-label="Camera presets" data-t-aria="Camera presets"></div>
+        <h2 class="parts-h"><span data-t="Parts">Parts</span> <button id="clear" type="button" data-tour="clear" class="linkbtn" data-t="Show all" data-t-title="Show everything (Esc)">Show all</button></h2>
+        <ul id="parts" class="parts"></ul>
+      </div>
+    </section>
+
+    <section id="right-rail" class="rail">
+      <div id="pane-gauges" class="pane" data-pane="gauges"><h2 data-t="Instruments">Instruments</h2><div id="gauges"></div></div>
+      <div id="pane-atoms" class="pane" data-pane="atoms">
+        <h2 id="atom-title" data-t="Atom view">Atom view</h2>
+        <canvas id="atom" width="560" height="320" aria-label="Animated cartoon of the nuclear reaction" data-t-aria="Animated cartoon of the nuclear reaction"></canvas>
+        <ul id="atom-legend" class="legend-list"></ul>
+        <dl id="atom-stats" class="facts"></dl>
+      </div>
+    </section>
+
+    <section id="deck" class="deck">
+      <div id="pane-controls" class="pane" data-pane="controls">
+        <div class="cb-in">
+        <div class="deck-row">
+          <div class="status-line"><div id="status" class="status" role="status"><span class="dot"></span><span id="status-text">RUNNING</span></div><span id="status-sub"></span></div>
+          <div class="accel-wrap"><span class="lbl" data-t="Time">Time</span><div id="accel-slot"></div></div>
+        </div>
+        <div id="controls"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div id="soon" hidden><div><span class="label sec" data-t="Coming soon">Coming soon</span><h2 id="soon-title"></h2><p id="soon-text" data-t="This machine is not built yet. Its tab will light up as soon as it ships.">This machine is not built yet. Its tab will light up as soon as it ships.</p></div></div>
+
+<aside id="drawer-compare" class="drawer" role="dialog" aria-modal="true" aria-labelledby="cmp-h" hidden>
+  <div class="drawer-in"><header><h2 id="cmp-h" data-t="Compare the four machines">Compare the four machines</h2><button type="button" class="x" data-close aria-label="Close" data-t-aria="Close">&times;</button></header>
+  <div class="scroll"><table id="cmp-table"></table><p class="note" data-t="Every value is read from the same spec objects that size the 3D parts and drive the gauges. The sign &quot;≈&quot; marks approximate values.">Every value is read from the same spec objects that size the 3D parts and drive the gauges. The sign "≈" marks approximate values.</p></div></div>
+</aside>
+
+<aside id="drawer-about" class="drawer" role="dialog" aria-modal="true" aria-labelledby="abt-h" hidden>
+  <div class="drawer-in"><header><h2 id="abt-h" data-t="About and sources">About and sources</h2><button type="button" class="x" data-close aria-label="Close" data-t-aria="Close">&times;</button></header>
+  <div class="scroll" id="about-body"></div></div>
+</aside>
+
+<div id="cursor" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 2l15 9-6.5 1.6L9.6 19z" fill="#14202B" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg><i></i></div>
+<script>/*__SCRIPT__*/</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "reactor-teardown",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Reactor Teardown: interactive 3D explainer of four reactors as one offline HTML file",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/",
+    "shot": "node tools/shot.mjs"
+  },
+  "dependencies": {
+    "esbuild": "0.24.2",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "playwright-core": "1.49.1"
+  }
+}

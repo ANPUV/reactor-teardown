@@ -1,0 +1,25 @@
+// PWR tour. Step vocabulary is documented in kit/tour.js.
+export const tour = [
+  { say: 'A four-loop pressurised water reactor at full power: 3411 MW of heat, about 1150 MW of electricity.', wait: 3600 },
+  { camera: 'iso', say: 'Water at 15.5 MPa carries the heat out of the core. It stays liquid at 325 °C.', wait: 3200 },
+  { isolate: 'rpv', say: 'The pressure vessel: 4.4 m inside diameter, 22 cm of steel.', wait: 3200 },
+  { isolate: 'core', say: '193 fuel assemblies. The blue glow is Cherenkov light; it brightens with power.', wait: 3600 },
+  { isolate: 'assembly', say: 'One assembly: a 17 × 17 lattice. 264 fuel rods, 24 guide tubes for control rods, 1 instrument tube.', wait: 3800 },
+  { isolate: 'rod', say: 'One rod: a 3.66 m stack of uranium dioxide pellets in a zirconium alloy tube.', wait: 3400 },
+  { isolate: 'pellet', say: 'One pellet, 8.2 mm wide. The centre runs far hotter than the surface.', wait: 3400 },
+  { clear: true, mode: 'cutaway', say: 'Back to the whole plant.', wait: 1200 },
+  { control: { id: 'rods', to: 78 }, ms: 2400, say: 'Insert the control rods: neutrons are absorbed, power falls.', wait: 3800 },
+  { control: { id: 'rods', to: 88 }, ms: 2000, say: 'Withdraw them again: feedback from the water temperature levels the power off.', wait: 3200 },
+  { control: { id: 'load', to: 80 }, ms: 2200, say: 'Ask the turbine for less. Steam demand drops, the water warms, power follows it down.', wait: 3800 },
+  { control: { id: 'load', to: 100 }, ms: 1800, wait: 1200 },
+  { isolate: 'tower', say: 'The third circuit: a cooling tower hands about two thirds of the heat to the air. The plume is clean water vapour and never touches the reactor water.', wait: 4200 },
+  { clear: true, mode: 'cutaway', wait: 800 },
+  { mode: 'xray', say: 'X-ray view.', wait: 2200 },
+  { mode: 'cutaway', explode: 1, ms: 2600, say: 'Explode: every subsystem pulled apart.', wait: 3600 },
+  { explode: 0, ms: 2000, wait: 600 },
+  { accel: 10, say: 'Time runs 10 times faster.', wait: 900 },
+  { press: 'scram', say: 'SCRAM. Rods drop in, power falls to decay heat, about 7 % and falling.', wait: 5200 },
+  { accel: 1, wait: 400 },
+  { resetModel: true, say: 'Your turn: drag to orbit, press a part button, move a slider.', wait: 3000 },
+];
+export default tour;

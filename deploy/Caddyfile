@@ -1,0 +1,11 @@
+{
+	admin off
+	auto_https off
+}
+
+:8088 {
+	root * "/Users/admin/Interactive page/site"
+	encode zstd gzip
+	header Cache-Control "no-cache"
+	file_server
+}

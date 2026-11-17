@@ -1,0 +1,57 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "Fonts": {
+      "files": {},
+      "name": "Fonts",
+      "order": [],
+      "tile": "m"
+    },
+    "Logos": {
+      "files": {
+        "strategik-logo.svg": {
+          "blob": "243374277540de6736b1e295f0d6eaa5",
+          "name": "strategik-logo.svg",
+          "size": 1539,
+          "type": "image/svg+xml"
+        },
+        "strategik-monogram.svg": {
+          "blob": "040cffbd75b1ca179e4612c7344145ee",
+          "name": "strategik-monogram.svg",
+          "size": 329,
+          "type": "image/svg+xml"
+        }
+      },
+      "name": "Logos",
+      "order": [
+        "strategik-logo.svg",
+        "strategik-monogram.svg"
+      ],
+      "tile": "l"
+    }
+  },
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-10-14T02:54:21Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "groups": [
+    "Logos",
+    "Fonts"
+  ],
+  "lastChange": {
+    "at": "2026-10-14T02:54:21Z",
+    "by": "Claude",
+    "note": "Created from the Strategik look used across PortalOne, Atlas, Dispatch Board, Sightline and ScriptTree (2026-10-14).",
+    "via": "Claude Code"
+  },
+  "layout": "files",
+  "libraries": [],
+  "namespace": "Strategik",
+  "sections": {},
+  "title": "Strategik"
+}

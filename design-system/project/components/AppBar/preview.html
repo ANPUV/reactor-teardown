@@ -1,0 +1,21 @@
+<!-- @dsCard group="Navigation" height=190 subtitle="Black, 60px, monogram + wordmark + mono nav" -->
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap"><style>
+  *{box-sizing:border-box} body{margin:0;padding:20px;background:var(--ground);color:var(--body);font-family:var(--font-sans);line-height:1.5}
+  .mono{font-family:var(--font-mono)} .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .btn{font-family:var(--font-mono);font-size:13px;font-weight:700;letter-spacing:.04em;padding:12px 18px;border:1px solid var(--ink);background:var(--ink);color:var(--ground);cursor:pointer}
+  .btn:hover{background:#333;border-color:#333} .btn.sec{background:var(--ground);color:var(--ink);border-color:var(--console)} .btn.sec:hover{background:var(--wash)}
+  .btn.quiet{background:none;border-color:transparent;color:var(--ink);text-decoration:underline;text-underline-offset:2px} .btn.danger{background:var(--ground);color:var(--danger-ink);border-color:var(--danger-ink)}
+  .btn[disabled]{background:#E5E5E5;border-color:#E5E5E5;color:#666;cursor:default}
+  .chip{font-family:var(--font-mono);font-size:11px;font-weight:600;padding:2px 6px;background:var(--wash);color:var(--chip-ink);display:inline-flex;align-items:center;gap:6px}
+  .chip.ok{background:var(--ok-bg);color:var(--ok-ink)} .chip.warn{background:var(--warn-bg);color:var(--warn-ink)} .chip.danger{background:var(--danger-bg);color:var(--danger-ink)}
+  .m{width:7px;height:7px;display:inline-block;flex:none} .m.ok{background:var(--mark-ok)} .m.warn{background:var(--mark-warn)} .m.danger{background:var(--mark-danger)} .m.run{background:var(--signal)} .m.none{background:var(--mark-none)} .m.hollow{background:none;border:1.5px solid var(--faint)}
+  .label{font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)} .label::before{content:"\25A0";color:var(--signal);margin-right:10px;font-size:9px;vertical-align:1px}
+</style><style></style></head><body>
+<style>.bar{height:60px;background:var(--bar);color:var(--bar-ink);display:flex;align-items:center;gap:24px;padding:0 24px;font-family:var(--font-mono)}
+.mono-mark{position:relative;width:40px;height:40px;border:1px solid var(--bar-line);border-radius:8px;background:#000;color:#fff;display:grid;place-items:center;font-weight:800;font-size:12px}
+.mono-mark::after{content:"";position:absolute;top:-3px;right:-3px;width:7px;height:7px;border-radius:999px;background:var(--signal)}
+.word{font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:16px} .nav a{color:var(--bar-ink);opacity:.65;text-decoration:none;font-size:13px;margin-right:20px} .nav a[aria-current]{opacity:1} .nav a[aria-current]::before{content:"\25A0";color:var(--signal);margin-right:8px;font-size:9px}
+.srch{margin-left:auto;background:var(--bar-field);border:1px solid var(--bar-line);color:var(--bar-ink);padding:8px 12px;font:12px var(--font-mono);width:220px;opacity:.9}
+.inv{background:var(--bar-ink);color:var(--bar);border:0;font:700 13px var(--font-mono);padding:10px 16px}</style>
+<div class="bar"><span class="mono-mark">P1</span><span class="word">PortalOne</span><nav class="nav" aria-label="Chính"><a href="#" aria-current="page">Bảng công việc</a><a href="#">Việc của tôi</a><a href="#">Tìm kiếm</a></nav><span class="srch">Tìm công việc, tài liệu…</span><button class="inv" type="button">Thêm công việc</button></div>
+<p class="mono" style="font-size:12px;color:var(--muted);margin:14px 0 0">The primary action on a black bar is inverted: bar-ink fill, bar text. The orange dot marks the monogram only.</p></body></html>

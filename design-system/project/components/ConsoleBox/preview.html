@@ -1,0 +1,17 @@
+<!-- @dsCard group="Forms" height=260 subtitle="The main form or composer: 1px line, 8px inside" -->
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap"><style>
+  *{box-sizing:border-box} body{margin:0;padding:20px;background:var(--ground);color:var(--body);font-family:var(--font-sans);line-height:1.5}
+  .mono{font-family:var(--font-mono)} .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .btn{font-family:var(--font-mono);font-size:13px;font-weight:700;letter-spacing:.04em;padding:12px 18px;border:1px solid var(--ink);background:var(--ink);color:var(--ground);cursor:pointer}
+  .btn:hover{background:#333;border-color:#333} .btn.sec{background:var(--ground);color:var(--ink);border-color:var(--console)} .btn.sec:hover{background:var(--wash)}
+  .btn.quiet{background:none;border-color:transparent;color:var(--ink);text-decoration:underline;text-underline-offset:2px} .btn.danger{background:var(--ground);color:var(--danger-ink);border-color:var(--danger-ink)}
+  .btn[disabled]{background:#E5E5E5;border-color:#E5E5E5;color:#666;cursor:default}
+  .chip{font-family:var(--font-mono);font-size:11px;font-weight:600;padding:2px 6px;background:var(--wash);color:var(--chip-ink);display:inline-flex;align-items:center;gap:6px}
+  .chip.ok{background:var(--ok-bg);color:var(--ok-ink)} .chip.warn{background:var(--warn-bg);color:var(--warn-ink)} .chip.danger{background:var(--danger-bg);color:var(--danger-ink)}
+  .m{width:7px;height:7px;display:inline-block;flex:none} .m.ok{background:var(--mark-ok)} .m.warn{background:var(--mark-warn)} .m.danger{background:var(--mark-danger)} .m.run{background:var(--signal)} .m.none{background:var(--mark-none)} .m.hollow{background:none;border:1.5px solid var(--faint)}
+  .label{font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)} .label::before{content:"\25A0";color:var(--signal);margin-right:10px;font-size:9px;vertical-align:1px}
+</style><style></style></head><body>
+<div style="border:1px solid var(--console);padding:8px;max-width:460px"><div style="padding:18px 20px;display:grid;gap:14px">
+<div style="display:grid;gap:6px"><label class="label" for="u" style="letter-spacing:.08em;font-size:11px">Tên đăng nhập hoặc email</label><input id="u" placeholder="nguyen.minh.anh" style="font:14px var(--font-mono);padding:12px 14px;background:var(--well);border:1px solid var(--field-line);color:var(--ink)"></div>
+<div style="display:flex;align-items:center;gap:14px;font:11px var(--font-mono);letter-spacing:1px;text-transform:uppercase;color:var(--muted)"><i style="height:1px;background:var(--line-soft);flex:1"></i>Phạm vi<i style="height:1px;background:var(--line-soft);flex:1"></i></div>
+<button class="btn" type="button" style="display:flex;justify-content:space-between"><span>Đăng nhập</span><span aria-hidden="true">→</span></button></div></div></body></html>

@@ -1,0 +1,6 @@
+tunnel: d5fec191-0f17-4e8e-97c4-aa3bee02b0d4
+credentials-file: /Users/admin/.cloudflared/d5fec191-0f17-4e8e-97c4-aa3bee02b0d4.json
+ingress:
+  - hostname: reactor.ezai.technology
+    service: http://127.0.0.1:8088
+  - service: http_status:404

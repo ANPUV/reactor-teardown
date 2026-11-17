@@ -1,0 +1,27 @@
+<!-- @dsCard height=300 -->
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap"><style>
+  body{margin:0;background:var(--ground)} svg{display:block;width:960px;height:300px}
+  .ink{fill:var(--ink)} .sig{fill:var(--signal)} .a{fill:var(--id-1)} .b{fill:var(--id-2)} .c{fill:var(--id-3)} .d{fill:var(--id-4)} .e{fill:var(--id-5)} .f{fill:var(--id-6)}
+  .plus{stroke:var(--decor);stroke-width:1;fill:none} .rule{stroke:var(--line);stroke-width:1}
+  .name{font:600 80px 'Space Grotesk',system-ui,sans-serif;fill:var(--ink);letter-spacing:-.01em} .tag{font:400 13px 'JetBrains Mono',ui-monospace,monospace;fill:var(--muted)}
+</style></head><body>
+<svg viewBox="0 0 960 300" role="img" aria-label="Strategik">
+<!-- Derivation.
+  Blocks: ink slab 240x300 (the brand is black on white) at x=480, bleeding off the top; signal square 60x60 at x=720 (the one orange); six identity bands 40px tall in id-1..id-6, staggered from x=740, widths 220 to 120.
+  Arrangement: one tall slab with a satellite square and a staggered stack of unequal bands, all right of x=480; nothing crosses the name.
+  Pattern: precise, technical, mono -> a plus grid at the 50px tech-grid pitch in decor, only in the ground between blocks; the system says "instrument panel".
+  Steps and radii: pitch 50 = the tech grid; band height 40 = space-10; radius-none: every corner square. -->
+  <rect class="ink" x="480" y="0" width="240" height="300"/>
+  <rect class="sig" x="720" y="0" width="60" height="60"/>
+  <rect class="a" x="740" y="80" width="220" height="40"/>
+  <rect class="b" x="780" y="120" width="180" height="40"/>
+  <rect class="c" x="740" y="160" width="160" height="40"/>
+  <rect class="d" x="820" y="200" width="140" height="40"/>
+  <rect class="e" x="760" y="240" width="130" height="40"/>
+  <rect class="f" x="900" y="240" width="60" height="40"/>
+  <g class="plus">
+    <path d="M804 40h12M810 34v12 M854 40h12M860 34v12 M904 40h12M910 34v12 M754 140h12M760 126v0M760 134v12 M774 220h12M780 214v12 M834 290h12M840 284v12 M904 290h12M910 284v12"/>
+  </g>
+  <text class="name" x="40" y="220">Strategik</text>
+  <text class="tag" x="42" y="250">Black on white. One orange, as a mark.</text>
+</svg></body></html>
